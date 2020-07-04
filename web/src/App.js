@@ -18,12 +18,9 @@ const { register, handleSubmit, errors} = useForm()
             <label>User</label>
           </div>
           <div>
-            <input name="password" type="password" ref={register({required:true})} required/>
+            <input name="passwords" type="password" ref={register({required:true, min:8})} required/>
             <label>Password</label>
           </div>
-          
-          {/* {errors.exampleRequire && <span>This field is required</span>} */}
-
           <input type="submit"/>
         </form>
       </div>

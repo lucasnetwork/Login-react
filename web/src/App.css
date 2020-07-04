@@ -11,6 +11,8 @@ html,body,#root,.App{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-image: url("img/background.jpg");
+  background-position: center;
 }
 .App .box{
   width:400px;
@@ -57,6 +59,8 @@ html,body,#root,.App{
 .App .box form div input:focus ~ label,
 .App .box form div input:valid ~ label
 {
+  color:rgb(40, 112, 207);
+  font-weight: bold;
   top:-10px;
   left:0;
   font-size: 12px;
