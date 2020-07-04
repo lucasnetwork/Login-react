@@ -54,17 +54,10 @@ html,body,#root,.App{
   font-weight:bold;
   
 }
-.App .box form div input:focus ~ label{
+.App .box form div input:focus ~ label,
+.App .box form div input:valid ~ label
+{
   top:-10px;
   left:0;
   font-size: 12px;
-}
-
-@keyframes animate{
-   from{
-     top:0
-   }
-   to{
-     
-   }
 }

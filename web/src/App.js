@@ -14,11 +14,11 @@ const { register, handleSubmit, errors} = useForm()
         <h2>Login</h2>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div >
-            <input name="user" ref={register({required:true})}/>
+            <input name="user" ref={register({required:true})} required/>
             <label>User</label>
           </div>
           <div>
-            <input name="password" type="password" ref={register({required:true})}/>
+            <input name="password" type="password" ref={register({required:true})} required/>
             <label>Password</label>
           </div>
           
