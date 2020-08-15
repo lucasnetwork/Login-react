@@ -1,3 +1,3 @@
 import app from './app'
 
-app.listen(3333,() => console.log('funcionando'))
+app.listen(process.env.PORT_URL,() => console.log('funcionando'))
