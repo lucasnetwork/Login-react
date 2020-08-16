@@ -1,11 +1,11 @@
 import React from 'react'
 import {Route, Redirect} from 'react-router-dom'
 
-const PrivateRoute = ({...rest}) =>{
+const PrivateRoute = ({component:Component,...rest}) =>{
     return (
-        <Route {...rest} render={() => {
+        <Route {...rest} render={props => {
             const token = localStorage.getItem('tokenPayload')
-            return (token ? <h1>logado</h1> : <Redirect to="/"/>)
+            return (token ? <Component {...props}/> : <Redirect to="/"/>)
         }}/>
     )
 }
