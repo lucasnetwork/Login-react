@@ -5,7 +5,7 @@ class SessionController{
         const {email,password} = req.body
         
         if(email ==="lucas@gmail.com" && password==="12345678"){
-            const token = jwt.sign({id:1},process.env.SECRET)
+            const token = jwt.sign({id:1},process.env.SECRET,{expiresIn:process.env.EXPIRE_TOKEN})
             return res.send(token);
         }else{
             return res.status(400).json({error:"email or password invalids"})
