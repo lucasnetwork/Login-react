@@ -1,6 +1,6 @@
 import express from 'express'
 import SessionController from './controllers/SessionController';
-import sessionValidate from './validations/sessionValidate';
+import sessionValidate from './validations/SessionValidate';
 
 const routes = express.Router();
 

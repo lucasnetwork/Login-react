@@ -11,8 +11,8 @@ class App{
     }
 
     middlewares(){
+        this.server.use(errors({statusCode:400}))
         this.server.use(express.json())
-        this.server.use(errors())
     }
 
     routes(){
