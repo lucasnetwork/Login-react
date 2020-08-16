@@ -1,17 +1,21 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
-
+import {useHistory} from 'react-router-dom'
 import api from '../../services/api';
 
 import './styles.css'
 
 const Login = () =>{
+    const history = useHistory()
     const { register, handleSubmit, errors} = useForm()
     
     async function onSubmit(data){
         try{
           const response = await api.post('/session',data)
+          localStorage.setItem("tokenPayload",response.data)
+          history.push("/home")
         }catch{
+          console.log("error")
         }
       }
 
